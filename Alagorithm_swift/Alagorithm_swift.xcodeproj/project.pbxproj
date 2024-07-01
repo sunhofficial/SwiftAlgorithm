@@ -6,10 +6,6 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		C79B34E52C32868700A9A906 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B34E42C32868700A9A906 /* main.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		C79B34DF2C32868700A9A906 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		C79B34E12C32868700A9A906 /* Alagorithm_swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Alagorithm_swift; sourceTree = BUILT_PRODUCTS_DIR; };
-		C79B34E42C32868700A9A906 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C79B34F02C32882900A9A906 /* 1920.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1920.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +37,8 @@
 		C79B34D82C32868700A9A906 = {
 			isa = PBXGroup;
 			children = (
-				C79B34E32C32868700A9A906 /* Alagorithm_swift */,
+				C79B34EC2C3287D700A9A906 /* Sorting */,
+				C79B34EB2C32869200A9A906 /* Greedy */,
 				C79B34E22C32868700A9A906 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +51,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C79B34E32C32868700A9A906 /* Alagorithm_swift */ = {
+		C79B34EB2C32869200A9A906 /* Greedy */ = {
 			isa = PBXGroup;
 			children = (
-				C79B34E42C32868700A9A906 /* main.swift */,
 			);
-			path = Alagorithm_swift;
+			path = Greedy;
+			sourceTree = "<group>";
+		};
+		C79B34EC2C3287D700A9A906 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				C79B34EF2C3287FE00A9A906 /* 프로그래머스 */,
+				C79B34ED2C3287F300A9A906 /* 백준 */,
+			);
+			path = Sorting;
+			sourceTree = "<group>";
+		};
+		C79B34ED2C3287F300A9A906 /* 백준 */ = {
+			isa = PBXGroup;
+			children = (
+				C79B34F02C32882900A9A906 /* 1920.swift */,
+			);
+			name = "백준";
+			path = "백준";
+			sourceTree = "<group>";
+		};
+		C79B34EF2C3287FE00A9A906 /* 프로그래머스 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "프로그래머스";
+			path = "프로그래머스";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +142,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C79B34E52C32868700A9A906 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
