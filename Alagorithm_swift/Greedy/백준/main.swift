@@ -12,20 +12,19 @@ for i in 0..<n {
     coins.append(Int(readLine()!)!)
 }
 var cnt = Int.max
+coins.reverse()
 var temp = k
 var tempcnt = 0
-for t in coins.reversed() {
-    while temp % t == 0 {
-        temp -= t
-        tempcnt += 1
+for t in coins {
+    let divide = temp / t
+    if divide > 0 {
+        tempcnt += divide
+        temp = temp % t
+
     }
-//
-//    if k % t != 0 {
-//        break
-//    } else {
-//        temp = k % t
-//        tempcnt += 1
-//
-//    }
+    if temp == 0 {
+        break
+    }
 
 }
+print(tempcnt)
