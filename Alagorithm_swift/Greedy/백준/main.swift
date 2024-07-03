@@ -7,26 +7,37 @@
 
 import Foundation
 let n = Int(readLine()!)!
-let ds = readLine()!.split(separator: " " )
-let ps = readLine()!.split(separator: " ")
+let ds = readLine()!.split(separator: " " ).map{Int(String($0))!}
+let ps = readLine()!.split(separator: " ").map{Int(String($0))!}
 var sum = 0
-var passing = -1
-for i in 0 ..< n {
-    let currentP = Int(ps[i])!
-    var currentSpot = 0
-    if passing == i {
-        continue
+var min = ps[0]
+//var passing = -1
+//for i in 0 ..< ps.count {
+//    let currentP = Int(ps[i])!
+//    var currentSpot = 0
+//    if passing == i {
+//        continue
+//    }
+//    for j in i+1 ..< ps.count {
+//        currentSpot += Int(ds[j - 1])!
+//        if currentP < Int(ps[j])! {
+//            passing = j
+//            continue
+//        } else {
+//            break
+//        }
+//    }
+//
+//    sum += (currentSpot * currentP)
+//    print(sum)
+//}
+//print(sum)
+// 시간복잡도가 O(n제곱이라) 부분성공한거 같다.
+
+for i in 0 ..< n - 1 {
+    if ps[i] < min {
+        min = ps[i]
     }
-    for j in i+1 ..< n {
-        currentSpot += Int(ds[j - 1])!
-        if currentP < Int(ps[j])! {
-            passing = j
-            continue
-        } else {
-            break
-        }
-    }
-    sum += (currentSpot * currentP)
+    sum += min * ds[i]
 }
 print(sum)
-            
