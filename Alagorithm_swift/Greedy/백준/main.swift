@@ -1,30 +1,32 @@
 //
-//  11047.swift
+//  13305.swift
 //  Alagorithm_swift
 //
-//  Created by 235 on 7/2/24.
+//  Created by 235 on 7/3/24.
 //
 
 import Foundation
-let ab = readLine()!.split(separator: " ").map{Int($0)!},  n = ab[0], k = ab[1]
-var coins: [Int] = []
-for i in 0..<n {
-    coins.append(Int(readLine()!)!)
-}
-var cnt = Int.max
-coins.reverse()
-var temp = k
-var tempcnt = 0
-for t in coins {
-    let divide = temp / t
-    if divide > 0 {
-        tempcnt += divide
-        temp = temp % t
-
+let n = Int(readLine()!)!
+let ds = readLine()!.split(separator: " " )
+let ps = readLine()!.split(separator: " ")
+var sum = 0
+var passing = -1
+for i in 0 ..< n {
+    let currentP = Int(ps[i])!
+    var currentSpot = 0
+    if passing == i {
+        continue
     }
-    if temp == 0 {
-        break
+    for j in i+1 ..< n {
+        currentSpot += Int(ds[j - 1])!
+        if currentP < Int(ps[j])! {
+            passing = j
+            continue
+        } else {
+            break
+        }
     }
-
+    sum += (currentSpot * currentP)
 }
-print(tempcnt)
+print(sum)
+            

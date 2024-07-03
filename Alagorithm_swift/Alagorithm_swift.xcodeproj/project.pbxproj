@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C79B34F92C33D5EB00A9A906 /* 체육복.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B34F82C33D5EB00A9A906 /* 체육복.swift */; };
-		C79B34FA2C340A0700A9A906 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B34F62C33CB7100A9A906 /* main.swift */; };
+		C7B9D2702C351BB20074C162 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9D26F2C3511F20074C162 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +27,9 @@
 		C79B34E12C32868700A9A906 /* Alagorithm_swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Alagorithm_swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79B34F02C32882900A9A906 /* 1920.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1920.swift; sourceTree = "<group>"; };
 		C79B34F22C32AB8500A9A906 /* K번째수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "K번째수.swift"; sourceTree = "<group>"; };
-		C79B34F62C33CB7100A9A906 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C79B34F62C33CB7100A9A906 /* 11047.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11047.swift; sourceTree = "<group>"; };
 		C79B34F82C33D5EB00A9A906 /* 체육복.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "체육복.swift"; sourceTree = "<group>"; };
+		C7B9D26F2C3511F20074C162 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +108,8 @@
 		C79B34F52C33CB5500A9A906 /* 백준 */ = {
 			isa = PBXGroup;
 			children = (
-				C79B34F62C33CB7100A9A906 /* main.swift */,
+				C79B34F62C33CB7100A9A906 /* 11047.swift */,
+				C7B9D26F2C3511F20074C162 /* main.swift */,
 			);
 			name = "백준";
 			path = "백준";
@@ -172,8 +174,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B9D2702C351BB20074C162 /* main.swift in Sources */,
 				C79B34F92C33D5EB00A9A906 /* 체육복.swift in Sources */,
-				C79B34FA2C340A0700A9A906 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
