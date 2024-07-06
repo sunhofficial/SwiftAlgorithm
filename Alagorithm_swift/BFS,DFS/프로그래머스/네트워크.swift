@@ -4,6 +4,7 @@ func solution(_ n:Int, _ computers:[[Int]]) -> Int {
     var visited = Array(repeating: false, count: n)
     var cnt = 0
     func dfs(i: Int) {
+        visited[i]  = true
         for (j, val) in computers[i].enumerated() {
             if val == 1 && j != i && visited[j] == false {
                 visited[j] = true
@@ -13,9 +14,11 @@ func solution(_ n:Int, _ computers:[[Int]]) -> Int {
         }
 
     }
-    visited[0] = true
     for i in 0..<n {
-        dfs(i: i)
+        if !visited[i] {
+            dfs(i: i)
+        }
+
     }
 
     return n -  cnt
