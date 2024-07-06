@@ -1,44 +1,36 @@
 //
-//  18352.swift
+//  7562.swift
 //  Alagorithm_swift
 //
-//  Created by 235 on 7/5/24.
+//  Created by 235 on 7/6/24.
 //
 
 import Foundation
-let nmkx = readLine()!.split(separator: " ").map{Int(String($0))!}
-let n = nmkx[0], m = nmkx[1], k = nmkx[2], x = nmkx[3]
-var roadArray: [[Int]] = Array(repeating: [], count: n + 1)
-for i in 0..<m {
-    let ab = readLine()!.split(separator: " ").map {Int(String($0))!}
-    roadArray[ab[0]].append(ab[1])
-}
+let n = Int(readLine()!)!
+let dx = [-2, -1, 1, 2, 2, 1, -1, -2]
+let dy = [1,2,2,1,-1,-2,-2,-1]
+for _ in 0..<n {
+    let m = Int(readLine()!)!
+    let start = readLine()!.split(separator: " ").map {Int(String($0))!}
+    let end = readLine()!.split(separator: " ").map {Int(String($0))!}
+    let startx = start[0], starty = start[1]
+    var visited = Array(repeating: Array(repeating: -1 , count: m), count: m)
+    visited[starty][startx] = 0
+    var queue = [(startx, starty)]
+    var index = 0
+    while index < queue.count   {
+        let current = queue[index]
+        for i in 0..<8 {
+            let nextx = current.0 + dx[i]
+            let nexty = current.1 + dy[i]
+            if  0..<m ~= nextx  && 0..<m ~= nexty && visited[nexty][nextx] == -1 {
+                queue.append((nextx,nexty))
+                visited[nexty][nextx] = visited[current.1][current.0] + 1
 
-var dist = Array(repeating: -1, count: n  + 1)
-var queue = [Int ]()
-queue.append(x)
-dist[x] = 0
-var index = 0
-while index < queue.count {
-    let current = queue[index]
-    index += 1
-    for next in roadArray[current] {
-        if dist[next] == -1 {
-            dist[next] = dist[current] + 1
-            queue.append(next)
+            }
         }
+        index += 1
     }
+    print(visited[end[1]][end[0]])
 }
 
-var result = [Int]()
-for i in 1...n {
-    if dist[i] == k {
-        result.append(i)
-    }
-}
-
-if result.isEmpty {
-    print(-1)
-} else {
-    result.sorted().forEach { print($0) }
-}
