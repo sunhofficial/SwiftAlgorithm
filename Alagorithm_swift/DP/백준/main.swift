@@ -1,5 +1,5 @@
 //
-//  2775.swift
+//  9461.swift
 //  Alagorithm_swift
 //
 //  Created by 235 on 7/9/24.
@@ -7,25 +7,22 @@
 
 import Foundation
 let t = Int(readLine()!)!
-for i in 0..<t {
-    let k = Int(readLine()!)!
-    let n = Int(readLine()!)!
-    var arr = Array(repeating: Array(repeating: 0, count: n + 1), count: k + 1)
-
-    for x in 0..<k+1 {
-        for v in 0..<n + 1 {
-            if x == 0 {
-                arr[x][v] = v + 1
-            } else {
-                if v == 0 {
-                    arr[x][v] = 1
-                } else {
-                    arr[x][v] = arr[x-1][v] + arr[x][v-1]
-                }
-            }
-        }
-    }
-
-
-    print("\(arr[k][n-1])")
+var dp = Array(repeating: 0, count: 101)
+dp[1] = 1
+dp[2] = 1
+dp[3] = 1
+dp[4] = 2
+dp[5] = 2
+func findDP(_ start: Int) -> Int {
+    if start < 6 {
+        return dp[start]
+    }else {
+        for i in 6...start {
+            dp[i] = dp[i-1] + dp[i-5]
+        }}
+    return dp[start]
 }
+for j in 0..<t {
+    print(findDP(Int(readLine()!)!))
+}
+
