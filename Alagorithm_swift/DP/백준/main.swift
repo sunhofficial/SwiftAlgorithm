@@ -1,20 +1,17 @@
 //
-//  2748.swift
+//  11057.swift
 //  Alagorithm_swift
 //
-//  Created by 235 on 7/12/24.
+//  Created by 235 on 7/13/24.
 //
 
 import Foundation
-let n = Int( readLine()!)!
-var dp = Array(repeating: 0, count: 91)
-dp[0] = 0
-dp[1] = 1
-
-if n >= 2 {
-    for i in 2...n {
-        dp[i] = dp[i-1] + dp[i-2]
+let n = Int(readLine()!)!
+var dp = Array(repeating: 1, count: 10)
+for _ in 1..<n {
+    for i in 1...9 {
+        dp[i] = (dp[i-1] + dp[i]) %     10007
     }
 }
-print(dp[n])
 
+print(dp.reduce(0, {$0 + $1 }) % 10007)
