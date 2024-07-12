@@ -1,22 +1,20 @@
 //
-//  11055.swift
+//  11048.swift
 //  Alagorithm_swift
 //
-//  Created by 235 on 7/11/24.
+//  Created by 235 on 7/12/24.
 //
 
 import Foundation
-let n = Int(readLine()!)!
-let aArrays = readLine()!.split(separator: " ").map {Int(String($0))!}
-var dp = Array(repeating: 0, count: n)
-dp[0] = aArrays[0]
-for i in 1..<n {
-    for j in 0..<i {
-        if aArrays[i] > aArrays[j] {
-            dp[i ] = max(dp[i], aArrays[i] + dp[j])
-        } else {
-            dp[i] = max(dp[i], aArrays[i])
-        }
+let nm = readLine()!.split(separator: " ").map {Int(String($0))!}
+var rooms = [[Int]]()
+for i in 0..<nm[0] {
+    rooms.append(readLine()!.split(separator: " ").map {Int(String($0))!})
+}
+var dp = Array(repeating: Array(repeating: 0, count: nm[1] + 1), count: nm[0] + 1)
+for y in 1...nm[0] {
+    for x in 1...nm[1] {
+        dp[y][x] = max(dp[y-1][x], dp[y-1][x-1] , dp[y][x-1]) + rooms[y-1][x-1]
     }
 }
-print(dp.max()!)
+print(dp[nm[0]][nm[1]])
