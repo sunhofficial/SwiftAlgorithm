@@ -1,5 +1,5 @@
 //
-//  1309.swift
+//  1890.swift
 //  Alagorithm_swift
 //
 //  Created by 235 on 7/14/24.
@@ -7,13 +7,22 @@
 
 import Foundation
 let n = Int(readLine()!)!
-var dp = Array(repeating: 0, count: 100001)
-dp[0] = 1
-dp[1] = 3
-dp[2] = 7
-if n >= 3 {
-    for i in 3...n {
-        dp[i] = (2*dp[i-1] + dp[i-2]) % 9901
+var maps = [[Int]]()
+for _ in 0..<n {
+    let lines = readLine()!.split(separator: " ").map {Int(String($0))!}
+    maps.append(lines)
+}
+var dp = Array(repeating: Array(repeating: 0, count: n), count: n)
+dp[0][0] = 1
+for y in 0..<n {
+    for x in 0..<n where maps[y][x] != 0 {
+        let value = maps[y][x]
+        if y+value < n {
+            dp[y+value][x] += dp[y][x]
+        }
+        if x+value < n{
+            dp[y][x+value] += dp[y][x]
+        }
     }
 }
-print(dp[n])
+print(dp[n-1][n-1])
