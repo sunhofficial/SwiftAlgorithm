@@ -1,21 +1,28 @@
 //
-//  15988.swift
+//  12852.swift
 //  Alagorithm_swift
 //
 //  Created by 235 on 7/15/24.
 //
 
 import Foundation
-let t = Int(readLine()!)!
-var dp = Array(repeating: 0, count: 1000001)
-dp[1] = 1
-dp[2] = 2
-dp[3] = 4
-dp[4] = 7
-for c in 5..<1000001 {
-    dp[c] = (dp[c-1] + dp[c-2] + dp[c-3]) % 1000000009
+var n = Int(readLine()!)! //1에서 ->N 으로 만들도록 해보자.
+var dp = Array(repeating: (Int.max, 0), count: n+1)
+dp[0] = (0,0)
+for i in 1...n {
+    dp[i] = (dp[i-1].0 + 1, i - 1)
+    if i % 3 == 0 && dp[i/3].0 + 1 < dp[i].0 {
+        dp[i] = (dp[i/3].0 + 1, i/3)
+    }
+    if i % 2 == 0 && dp[i/2].0 + 1 < dp[i].0 {
+        dp[i] = (dp[i/2].0 + 1, i/2)
+    }
 }
-for _ in 0..<t {
-    let k = Int(readLine()!)!
-    print(dp[k])
+
+var answer = [Int]()
+while n >= 1{
+    answer.append(n)
+    n = dp[n].1
 }
+print(answer.count - 1)
+answer.forEach {print($0, terminator: " ")}
