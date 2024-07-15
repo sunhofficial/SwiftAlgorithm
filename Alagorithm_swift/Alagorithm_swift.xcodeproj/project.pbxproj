@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		C770DBA92C390DE800E1BDC4 /* 네트워크.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770DBA82C390DE800E1BDC4 /* 네트워크.swift */; };
 		C770DBAD2C3AAB9400E1BDC4 /* 단어변환.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770DBAC2C3AAB9400E1BDC4 /* 단어변환.swift */; };
-		C792B0DB2C437DDD00C7A87D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792B0DA2C437DD700C7A87D /* main.swift */; };
 		C79B34F92C33D5EB00A9A906 /* 체육복.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B34F82C33D5EB00A9A906 /* 체육복.swift */; };
+		C7AD12F92C44F50100647ECE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD12F82C44F4F900647ECE /* main.swift */; };
 		C7B9D2732C353B790074C162 /* 조이스틱.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9D2712C353B4E0074C162 /* 조이스틱.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,13 +47,14 @@
 		C792B0D42C4186E500C7A87D /* 11057.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11057.swift; sourceTree = "<group>"; };
 		C792B0D62C419AFA00C7A87D /* 11051.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11051.swift; sourceTree = "<group>"; };
 		C792B0D82C43694800C7A87D /* 1309.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1309.swift; sourceTree = "<group>"; };
-		C792B0DA2C437DD700C7A87D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C792B0DA2C437DD700C7A87D /* 1890.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1890.swift; sourceTree = "<group>"; };
 		C79384FC2C3F8E140071AF52 /* 9184.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9184.swift; sourceTree = "<group>"; };
 		C79B34E12C32868700A9A906 /* Alagorithm_swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Alagorithm_swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79B34F02C32882900A9A906 /* 1920.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1920.swift; sourceTree = "<group>"; };
 		C79B34F22C32AB8500A9A906 /* K번째수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "K번째수.swift"; sourceTree = "<group>"; };
 		C79B34F62C33CB7100A9A906 /* 11047.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11047.swift; sourceTree = "<group>"; };
 		C79B34F82C33D5EB00A9A906 /* 체육복.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "체육복.swift"; sourceTree = "<group>"; };
+		C7AD12F82C44F4F900647ECE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C7B9D26F2C3511F20074C162 /* 13305.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 13305.swift; sourceTree = "<group>"; };
 		C7B9D2712C353B4E0074C162 /* 조이스틱.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "조이스틱.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +119,8 @@
 				C770DBB72C3CD35000E1BDC4 /* 9461.swift */,
 				C770DBB92C3D9B8B00E1BDC4 /* 1904.swift */,
 				C792B0D42C4186E500C7A87D /* 11057.swift */,
-				C792B0DA2C437DD700C7A87D /* main.swift */,
+				C792B0DA2C437DD700C7A87D /* 1890.swift */,
+				C7AD12F82C44F4F900647ECE /* main.swift */,
 				C770DBBB2C3DABFA00E1BDC4 /* 11722.swift */,
 				C792B0D62C419AFA00C7A87D /* 11051.swift */,
 				C792B0D22C40D5FC00C7A87D /* 2748.swift */,
@@ -267,7 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B9D2732C353B790074C162 /* 조이스틱.swift in Sources */,
-				C792B0DB2C437DDD00C7A87D /* main.swift in Sources */,
+				C7AD12F92C44F50100647ECE /* main.swift in Sources */,
 				C770DBA92C390DE800E1BDC4 /* 네트워크.swift in Sources */,
 				C79B34F92C33D5EB00A9A906 /* 체육복.swift in Sources */,
 				C770DBAD2C3AAB9400E1BDC4 /* 단어변환.swift in Sources */,
