@@ -1,28 +1,30 @@
 //
-//  12852.swift
+//  2294.swift
 //  Alagorithm_swift
 //
-//  Created by 235 on 7/15/24.
+//  Created by 235 on 7/16/24.
 //
 
 import Foundation
-var n = Int(readLine()!)! //1에서 ->N 으로 만들도록 해보자.
-var dp = Array(repeating: (Int.max, 0), count: n+1)
-dp[0] = (0,0)
-for i in 1...n {
-    dp[i] = (dp[i-1].0 + 1, i - 1)
-    if i % 3 == 0 && dp[i/3].0 + 1 < dp[i].0 {
-        dp[i] = (dp[i/3].0 + 1, i/3)
-    }
-    if i % 2 == 0 && dp[i/2].0 + 1 < dp[i].0 {
-        dp[i] = (dp[i/2].0 + 1, i/2)
+let nk = readLine()!.split(separator: " ").map{ Int(String($0))!}
+var coins = [Int]()
+var dp = Array(repeating: 10001, count: 10001)
+for _ in 0..<nk[0] {
+    coins.append(Int(readLine()!)!)
+}
+coins.sort()
+dp[0] = 0
+for coin in coins {
+    for j in 1...nk[1] {
+        if j - coin < 0 {
+            continue
+        }
+        dp[j] = min(dp[j], dp[j - coin] + 1)
     }
 }
-
-var answer = [Int]()
-while n >= 1{
-    answer.append(n)
-    n = dp[n].1
+if dp[nk[1]] == 10001 {
+    print(-1)
 }
-print(answer.count - 1)
-answer.forEach {print($0, terminator: " ")}
+else {
+    print(dp[nk[1]])
+}
