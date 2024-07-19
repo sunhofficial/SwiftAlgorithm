@@ -1,32 +1,31 @@
-//
-//  5568.swift
-//  Alagorithm_swift
-//
-//  Created by 235 on 7/18/24.
-//
-
 import Foundation
-let n = Int(readLine()!)!
-let k = Int(readLine()!)!
-var cards = [Int]()
-var visited = Array(repeating: false, count: n + 1)
-for _ in 0..<n {
-    cards.append(Int(readLine()!)!)
-}
-var answers = Set<Int>()
-func dfs(cnt: Int, answer: String) {
-    if cnt == k {
-        answers.insert(Int(answer)!)
+
+let ns = readLine()!.split(separator: " ").map { Int(String($0))! }
+let arrr = readLine()!.split(separator: " ").map { Int(String($0))! }
+let n = ns[0]
+let s = ns[1]
+var cnt = 0
+
+func dfs(index: Int, currentSum: Int) {
+    // 부분수열의 합이 S가 되면 카운트 증가
+    if index >= n {
         return
     }
-    for i in 0..<n {
-        if !visited[i] {
-            visited[i] = true
-            let temp = answer + "\(cards[i])"
-            dfs(cnt: cnt + 1,answer:  temp )
-            visited[i] = false
-        }
+
+    // 현재 요소를 포함하는 경우
+    if currentSum + arrr[index] == s {
+        cnt += 1
     }
+
+    // 다음 요소를 포함하지 않는 경우
+    dfs(index: index + 1, currentSum: currentSum)
+
+    // 다음 요소를 포함하는 경우
+    dfs(index: index + 1, currentSum: currentSum + arrr[index])
 }
-dfs(cnt: 0, answer: "")
-print(answers.count)
+
+// 초기 호출
+dfs(index: 0, currentSum: 0)
+
+// 결과 출력
+print(cnt)
