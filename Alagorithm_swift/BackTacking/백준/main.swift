@@ -1,36 +1,44 @@
 //
-//  10971.swift
+//  2529.swift
 //  Alagorithm_swift
 //
-//  Created by 235 on 7/21/24.
+//  Created by 235 on 7/22/24.
 //
 
 import Foundation
-let n = Int(readLine()!)!
-var values = Array(repeating: [Int()], count: n)
-var visited = Array(repeating: false, count: n)
-for i in 0..<n {
-    let infoLines = readLine()!.split(separator: " ").map{ Int(String($0))!}
-    values[i] = infoLines
-
-}
-var result = Int.max
-var sum = 0
-func dfs(_ depth: Int, _ now: Int, _ end: Int, _ value: Int) {
-    if depth == n && values[now][end] != 0 {
-        result = min(result,value + values[now][end])
+let k = Int(readLine()!)!
+let inputs = readLine()!.split(separator: " ")
+var visited = Array(repeating: false, count: 10)
+var maxValue = ""
+var minValue = ""
+func dfs(_ cnt: Int, answer: String) {
+    if cnt == k + 1 {
+        var arrAnswer = Array(answer)
+        for (index, value) in inputs.enumerated() {
+            if value == "<" && arrAnswer[index] < arrAnswer[index + 1]{
+                continue
+            }
+            else if value == ">" && arrAnswer[index] > arrAnswer[index + 1] {
+                continue
+            }
+            else {return}
+        }
+        if maxValue == "" || maxValue < answer {
+            maxValue = answer
+        }
+        if  minValue == "" || minValue > answer{
+            minValue = answer
+        }
         return
-
     }
-    for i in 0..<n {
-        if !visited[i] && values[now][i] > 0  && value < result{
+    for i in 0..<10 {
+        if !visited[i] {
             visited[i] = true
-            dfs(depth + 1, i, end, value + values[now][i])
+            dfs(cnt + 1, answer:  answer + String(i))
             visited[i] = false
-
         }
     }
 }
-visited[0] = true
-dfs(1, 0, 0, 0)
-print(result)
+dfs(0, answer: "")
+print(maxValue)
+print(minValue)
