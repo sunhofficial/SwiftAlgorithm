@@ -40,21 +40,22 @@ for i in 0..<nm[0] {
         return Int(String($0))!
     }
 }
-func dfs(_ depth: Int) {
+func dfs(_ depth: Int, _ now: Position) {
     if depth == 3 {
         bfs()
         return
     }
-    for i in 0..<nm[0] {
-        for j in 0..<nm[1] {
-            if maps[i][j] == 0 {
-                maps[i][j] = 1
-                dfs(depth + 1)
-                maps[i][j] = 0
-            }
-        }
-    }
 
+    for i in now.y..<nm[0] {
+           let startJ = i == now.y ? now.x : 0
+           for j in startJ..<nm[1] {
+               if maps[i][j] == 0 {
+                   maps[i][j] = 1
+                   dfs(depth + 1, (j, i))
+                   maps[i][j] = 0
+               }
+           }
+       }
 }
 func isValid(_ x: Int, _ y: Int) -> Bool {
     return x >= 0 && x < nm[1] && y >= 0 && y < nm[0]
@@ -84,7 +85,7 @@ func bfs() {
     }
     result = max(result, cnt)
 }
-dfs(0)
+dfs(0, (0,0))
 print(result)
 //1트째 512ms걸림 개오래걸림 시간 -> DFS를 최적화 해보자.
-
+//2트: DFS를 전부하는게 아니라 중복탐색을 방지해주었다. 현재행이 시작행일 경우 시작 열 이후로만 탐색을 진행한다. 그 외는 첫번쩨 열부터 다 탐색을 하도록 하였다. -> 시간이 112까지 줄어듬.
