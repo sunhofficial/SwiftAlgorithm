@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -79,6 +79,21 @@
 		C7BFCCFB2C50C6200042BA9C /* 3055.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3055.swift; sourceTree = "<group>"; };
 		C7BFCCFD2C50D6DA0042BA9C /* 14502.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14502.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C7909B442C5260720059FF57 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"백준/가장먼노드.swift",
+			);
+			target = C79B34E02C32868700A9A906 /* Alagorithm_swift */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C7909B3F2C5256310059FF57 /* 프로그래머스 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "프로그래머스"; path = "프로그래머스"; sourceTree = "<group>"; };
+		C7909B402C5260610059FF57 /* Graph */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C7909B442C5260720059FF57 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Graph; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C79B34DE2C32868700A9A906 /* Frameworks */ = {
@@ -157,6 +172,7 @@
 		C770DBB22C3CCCA200E1BDC4 /* DP */ = {
 			isa = PBXGroup;
 			children = (
+				C7909B3F2C5256310059FF57 /* 프로그래머스 */,
 				C770DBB32C3CCCA700E1BDC4 /* 백준 */,
 			);
 			path = DP;
@@ -191,6 +207,7 @@
 		C79B34D82C32868700A9A906 = {
 			isa = PBXGroup;
 			children = (
+				C7909B402C5260610059FF57 /* Graph */,
 				C735FFAB2C48D7C300AB6E11 /* BackTacking */,
 				C7AD12FE2C46484B00647ECE /* 완전탐색 */,
 				C770DBB22C3CCCA200E1BDC4 /* DP */,
@@ -480,6 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NG2NLR2Z86;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -493,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NG2NLR2Z86;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
