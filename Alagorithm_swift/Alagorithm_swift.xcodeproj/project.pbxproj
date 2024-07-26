@@ -80,7 +80,18 @@
 		C7BFCCFD2C50D6DA0042BA9C /* 14502.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14502.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C72439E92C535DD400DAB07E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				6064.swift,
+			);
+			target = C79B34E02C32868700A9A906 /* Alagorithm_swift */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		C72439E52C535DCC00DAB07E /* 백준 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C72439E92C535DD400DAB07E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); name = "백준"; path = "백준"; sourceTree = "<group>"; };
 		C7909B3F2C5256310059FF57 /* 프로그래머스 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "프로그래머스"; path = "프로그래머스"; sourceTree = "<group>"; };
 		C7909B402C5260610059FF57 /* Graph */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Graph; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -277,6 +288,7 @@
 		C7AD12FE2C46484B00647ECE /* 완전탐색 */ = {
 			isa = PBXGroup;
 			children = (
+				C72439E52C535DCC00DAB07E /* 백준 */,
 				C7AD12FF2C46485300647ECE /* Programmers */,
 			);
 			name = "완전탐색";
