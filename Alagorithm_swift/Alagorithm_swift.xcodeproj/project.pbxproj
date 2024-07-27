@@ -140,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C770DBA22C3713D900E1BDC4 /* 4963.swift */,
+				C704996A2C54DBAC00FF0F53 /* main.swift */,
 				C7BFCCFD2C50D6DA0042BA9C /* 14502.swift */,
 				C770DBAE2C3BB72200E1BDC4 /* 1325.swift */,
 				C770DBAA2C3A475A00E1BDC4 /* 2583.swift */,
@@ -194,7 +195,6 @@
 				C79384FC2C3F8E140071AF52 /* 9184.swift */,
 				C792B0D82C43694800C7A87D /* 1309.swift */,
 				C72CA8502C400235008D8DE3 /* 11055.swift */,
-				C704996A2C54DBAC00FF0F53 /* main.swift */,
 			);
 			name = "백준";
 			path = "백준";
