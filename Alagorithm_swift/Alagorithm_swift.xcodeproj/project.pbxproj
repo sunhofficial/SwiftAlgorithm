@@ -27,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C70499692C54B76A00FF0F53 /* 가장큰수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "가장큰수.swift"; sourceTree = "<group>"; };
 		C72439E32C5355D600DAB07E /* 2133.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2133.swift; sourceTree = "<group>"; };
 		C72CA8502C400235008D8DE3 /* 11055.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11055.swift; sourceTree = "<group>"; };
 		C735FFAD2C48D7DA00AB6E11 /* 15649.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15649.swift; sourceTree = "<group>"; };
@@ -80,18 +81,8 @@
 		C7BFCCFD2C50D6DA0042BA9C /* 14502.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14502.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C72439E92C535DD400DAB07E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				6064.swift,
-			);
-			target = C79B34E02C32868700A9A906 /* Alagorithm_swift */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C72439E52C535DCC00DAB07E /* 백준 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C72439E92C535DD400DAB07E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); name = "백준"; path = "백준"; sourceTree = "<group>"; };
+		C72439E52C535DCC00DAB07E /* 백준 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "백준"; path = "백준"; sourceTree = "<group>"; };
 		C7909B3F2C5256310059FF57 /* 프로그래머스 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "프로그래머스"; path = "프로그래머스"; sourceTree = "<group>"; };
 		C7909B402C5260610059FF57 /* Graph */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Graph; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -259,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				C79B34F22C32AB8500A9A906 /* K번째수.swift */,
+				C70499692C54B76A00FF0F53 /* 가장큰수.swift */,
 			);
 			name = "프로그래머스";
 			path = "프로그래머스";
