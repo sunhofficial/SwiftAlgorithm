@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71509DA2C55E09300F5C7FA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71509D92C55E08A00F5C7FA /* main.swift */; };
 		C770DBA92C390DE800E1BDC4 /* 네트워크.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770DBA82C390DE800E1BDC4 /* 네트워크.swift */; };
 		C770DBAD2C3AAB9400E1BDC4 /* 단어변환.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770DBAC2C3AAB9400E1BDC4 /* 단어변환.swift */; };
 		C79B34F92C33D5EB00A9A906 /* 체육복.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B34F82C33D5EB00A9A906 /* 체육복.swift */; };
@@ -30,6 +31,7 @@
 		C70499692C54B76A00FF0F53 /* 가장큰수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "가장큰수.swift"; sourceTree = "<group>"; };
 		C704996A2C54DBAC00FF0F53 /* 17070.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17070.swift; sourceTree = "<group>"; };
 		C71509D82C55DAD500F5C7FA /* 이중우선순위큐.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "이중우선순위큐.swift"; sourceTree = "<group>"; };
+		C71509D92C55E08A00F5C7FA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C72439E32C5355D600DAB07E /* 2133.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2133.swift; sourceTree = "<group>"; };
 		C72CA8502C400235008D8DE3 /* 11055.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11055.swift; sourceTree = "<group>"; };
 		C735FFAD2C48D7DA00AB6E11 /* 15649.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15649.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				C770DBB42C3CCCF200E1BDC4 /* 2775.swift */,
 				C7909B3D2C520F390059FF57 /* 2225.swift */,
+				C71509D92C55E08A00F5C7FA /* main.swift */,
 				C770DBB72C3CD35000E1BDC4 /* 9461.swift */,
 				C770DBB92C3D9B8B00E1BDC4 /* 1904.swift */,
 				C792B0D42C4186E500C7A87D /* 11057.swift */,
@@ -361,6 +364,7 @@
 			files = (
 				C7B9D2732C353B790074C162 /* 조이스틱.swift in Sources */,
 				C770DBA92C390DE800E1BDC4 /* 네트워크.swift in Sources */,
+				C71509DA2C55E09300F5C7FA /* main.swift in Sources */,
 				C79B34F92C33D5EB00A9A906 /* 체육복.swift in Sources */,
 				C770DBAD2C3AAB9400E1BDC4 /* 단어변환.swift in Sources */,
 				C7AD13012C46486300647ECE /* 최소직사각형.swift in Sources */,
