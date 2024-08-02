@@ -6,6 +6,10 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C7BF9D342C5CD2CB0091C765 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF9D332C5CD2CB0091C765 /* main.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C79B34DF2C32868700A9A906 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -79,24 +83,15 @@
 		C7BF9D202C5A2C530091C765 /* 1038.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1038.swift; sourceTree = "<group>"; };
 		C7BF9D272C5B63B30091C765 /* 9655.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9655.swift; sourceTree = "<group>"; };
 		C7BF9D292C5B67FF0091C765 /* 11000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11000.swift; sourceTree = "<group>"; };
+		C7BF9D332C5CD2CB0091C765 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C7BFCCFB2C50C6200042BA9C /* 3055.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3055.swift; sourceTree = "<group>"; };
 		C7BFCCFD2C50D6DA0042BA9C /* 14502.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14502.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C7BF9D322C5CC3AC0091C765 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"백준/main.swift",
-			);
-			target = C79B34E02C32868700A9A906 /* Alagorithm_swift */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C72439E52C535DCC00DAB07E /* 백준 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "백준"; path = "백준"; sourceTree = "<group>"; };
 		C7909B3F2C5256310059FF57 /* 프로그래머스 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "프로그래머스"; path = "프로그래머스"; sourceTree = "<group>"; };
-		C7909B402C5260610059FF57 /* Graph */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C7BF9D322C5CC3AC0091C765 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Graph; sourceTree = "<group>"; };
+		C7909B402C5260610059FF57 /* Graph */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Graph; sourceTree = "<group>"; };
 		C7BF9D132C58B1380091C765 /* StackOrQueue */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = StackOrQueue; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -154,6 +149,7 @@
 			children = (
 				C770DBA22C3713D900E1BDC4 /* 4963.swift */,
 				C704996A2C54DBAC00FF0F53 /* 17070.swift */,
+				C7BF9D332C5CD2CB0091C765 /* main.swift */,
 				C7BFCCFD2C50D6DA0042BA9C /* 14502.swift */,
 				C770DBAE2C3BB72200E1BDC4 /* 1325.swift */,
 				C770DBAA2C3A475A00E1BDC4 /* 2583.swift */,
@@ -379,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7BF9D342C5CD2CB0091C765 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
