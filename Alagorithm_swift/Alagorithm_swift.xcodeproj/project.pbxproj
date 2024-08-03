@@ -6,6 +6,10 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C7BF9D3A2C5E3BA00091C765 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF9D392C5E3BA00091C765 /* main.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C79B34DF2C32868700A9A906 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -80,6 +84,8 @@
 		C7BF9D272C5B63B30091C765 /* 9655.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9655.swift; sourceTree = "<group>"; };
 		C7BF9D292C5B67FF0091C765 /* 11000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11000.swift; sourceTree = "<group>"; };
 		C7BF9D332C5CD2CB0091C765 /* 16234.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 16234.swift; sourceTree = "<group>"; };
+		C7BF9D382C5E3BA00091C765 /* Alagorithm_swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alagorithm_swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7BF9D392C5E3BA00091C765 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C7BFCCFB2C50C6200042BA9C /* 3055.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3055.swift; sourceTree = "<group>"; };
 		C7BFCCFD2C50D6DA0042BA9C /* 14502.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14502.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C770DBB42C3CCCF200E1BDC4 /* 2775.swift */,
+				C7BF9D392C5E3BA00091C765 /* main.swift */,
 				C7BF9D272C5B63B30091C765 /* 9655.swift */,
 				C7909B3D2C520F390059FF57 /* 2225.swift */,
 				C71509D92C55E08A00F5C7FA /* 1520.swift */,
@@ -205,6 +212,7 @@
 				C79384FC2C3F8E140071AF52 /* 9184.swift */,
 				C792B0D82C43694800C7A87D /* 1309.swift */,
 				C72CA8502C400235008D8DE3 /* 11055.swift */,
+				C7BF9D382C5E3BA00091C765 /* Alagorithm_swift-Bridging-Header.h */,
 			);
 			name = "백준";
 			path = "백준";
@@ -371,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7BF9D3A2C5E3BA00091C765 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +513,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DP/백준/Alagorithm_swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -518,6 +528,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DP/백준/Alagorithm_swift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
