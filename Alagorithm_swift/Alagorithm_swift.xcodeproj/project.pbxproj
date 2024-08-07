@@ -6,10 +6,6 @@
 	objectVersion = 70;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		C7BF9D652C620DD50091C765 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF9D642C620DCE0091C765 /* main.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		C79B34DF2C32868700A9A906 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -89,16 +85,26 @@
 		C7BF9D432C5F03310091C765 /* 1339.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1339.swift; sourceTree = "<group>"; };
 		C7BF9D552C60B3160091C765 /* 1080.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1080.swift; sourceTree = "<group>"; };
 		C7BF9D572C61F6DC0091C765 /* 10942.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10942.swift; sourceTree = "<group>"; };
-		C7BF9D642C620DCE0091C765 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C7BF9D642C620DCE0091C765 /* 15652.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15652.swift; sourceTree = "<group>"; };
 		C7BFCCFB2C50C6200042BA9C /* 3055.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3055.swift; sourceTree = "<group>"; };
 		C7BFCCFD2C50D6DA0042BA9C /* 14502.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14502.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C7BF9D762C63154A0091C765 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"백준/main.swift",
+			);
+			target = C79B34E02C32868700A9A906 /* Alagorithm_swift */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C72439E52C535DCC00DAB07E /* 백준 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "백준"; path = "백준"; sourceTree = "<group>"; };
 		C7909B3F2C5256310059FF57 /* 프로그래머스 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "프로그래머스"; path = "프로그래머스"; sourceTree = "<group>"; };
 		C7909B402C5260610059FF57 /* Graph */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Graph; sourceTree = "<group>"; };
-		C7BF9D132C58B1380091C765 /* StackOrQueue */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = StackOrQueue; sourceTree = "<group>"; };
+		C7BF9D132C58B1380091C765 /* StackOrQueue */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C7BF9D762C63154A0091C765 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StackOrQueue; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				C735FFAD2C48D7DA00AB6E11 /* 15649.swift */,
-				C7BF9D642C620DCE0091C765 /* main.swift */,
+				C7BF9D642C620DCE0091C765 /* 15652.swift */,
 				C75A4B742C4F3005008101A1 /* 9663.swift */,
 				C7BF9D202C5A2C530091C765 /* 1038.swift */,
 				C7BF9D0A2C5731870091C765 /* 13020.swift */,
@@ -387,7 +393,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7BF9D652C620DD50091C765 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
