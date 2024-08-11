@@ -6,10 +6,6 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		C74F716F2C67412D007AC970 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74F716D2C674023007AC970 /* main.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		C74F70B62C65DC77007AC970 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -107,7 +103,8 @@
 		C74F71292C65E294007AC970 /* 24479.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 24479.swift; sourceTree = "<group>"; };
 		C74F716A2C673BF4007AC970 /* Alogrithm2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alogrithm2-Bridging-Header.h"; sourceTree = "<group>"; };
 		C74F716B2C673BF4007AC970 /* 1389.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1389.swift; sourceTree = "<group>"; };
-		C74F716D2C674023007AC970 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C74F716D2C674023007AC970 /* 17626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17626.swift; sourceTree = "<group>"; };
+		C74F71722C6864A5007AC970 /* 디스크컨트롤ㄹ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "디스크컨트롤ㄹ.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +190,7 @@
 			children = (
 				C74F70CB2C65DC93007AC970 /* 기능개발.swift */,
 				C74F70CC2C65DC93007AC970 /* 올바른괄호.swift */,
+				C74F71722C6864A5007AC970 /* 디스크컨트롤ㄹ.swift */,
 			);
 			path = "프로그래머스";
 			sourceTree = "<group>";
@@ -298,7 +296,7 @@
 			children = (
 				C74F70ED2C65DC93007AC970 /* 1005.swift */,
 				C74F70EE2C65DC93007AC970 /* 1309.swift */,
-				C74F716D2C674023007AC970 /* main.swift */,
+				C74F716D2C674023007AC970 /* 17626.swift */,
 				C74F70EF2C65DC93007AC970 /* 1520.swift */,
 				C74F70F02C65DC93007AC970 /* 1890.swift */,
 				C74F70F12C65DC93007AC970 /* 1904.swift */,
@@ -471,7 +469,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C74F716F2C67412D007AC970 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
