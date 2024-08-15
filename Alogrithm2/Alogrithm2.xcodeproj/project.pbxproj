@@ -112,6 +112,7 @@
 		C7D5B3FA2C6B7DC600BBF7BE /* 2011.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2011.swift; sourceTree = "<group>"; };
 		C7D5B4022C6C47FB00BBF7BE /* 2589.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2589.swift; sourceTree = "<group>"; };
 		C7D5B4042C6CE16300BBF7BE /* 10816.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10816.swift; sourceTree = "<group>"; };
+		C7D5B4062C6DA37100BBF7BE /* 큰수만들기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "큰수만들기.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				C74F71232C65DC93007AC970 /* 조이스틱.swift */,
+				C7D5B4062C6DA37100BBF7BE /* 큰수만들기.swift */,
 				C74F71242C65DC93007AC970 /* 체육복.swift */,
 			);
 			path = "프로그래머스";
