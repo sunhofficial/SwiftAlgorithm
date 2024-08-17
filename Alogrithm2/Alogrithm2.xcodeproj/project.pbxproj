@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C7D5B40A2C6DAA9100BBF7BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D5B4082C6DA96200BBF7BE /* main.swift */; };
 		C7D5B4182C6F0EC700BBF7BE /* 프로세스.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D5B4172C6F0EC700BBF7BE /* 프로세스.swift */; };
+		C7D5B41D2C70697600BBF7BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D5B41C2C70697600BBF7BE /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,9 +118,10 @@
 		C7D5B4022C6C47FB00BBF7BE /* 2589.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2589.swift; sourceTree = "<group>"; };
 		C7D5B4042C6CE16300BBF7BE /* 10816.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10816.swift; sourceTree = "<group>"; };
 		C7D5B4062C6DA37100BBF7BE /* 큰수만들기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "큰수만들기.swift"; sourceTree = "<group>"; };
-		C7D5B4082C6DA96200BBF7BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C7D5B4082C6DA96200BBF7BE /* 2636.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2636.swift; sourceTree = "<group>"; };
 		C7D5B4152C6F012100BBF7BE /* 10610.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10610.swift; sourceTree = "<group>"; };
 		C7D5B4172C6F0EC700BBF7BE /* 프로세스.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "프로세스.swift"; sourceTree = "<group>"; };
+		C7D5B41C2C70697600BBF7BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +138,7 @@
 		C733C0842C69D8DB00B4BDA3 /* ETC */ = {
 			isa = PBXGroup;
 			children = (
+				C7D5B41B2C70695A00BBF7BE /* 백준 */,
 				C733C0852C69D8DE00B4BDA3 /* 프로그래머스 */,
 			);
 			path = ETC;
@@ -378,7 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				C74F710A2C65DC93007AC970 /* 1325.swift */,
-				C7D5B4082C6DA96200BBF7BE /* main.swift */,
+				C7D5B4082C6DA96200BBF7BE /* 2636.swift */,
 				C7D5B4022C6C47FB00BBF7BE /* 2589.swift */,
 				C733C0812C69BA6B00B4BDA3 /* 1470.swift */,
 				C74F710B2C65DC93007AC970 /* 2206.swift */,
@@ -454,6 +456,15 @@
 			path = ../../Alagorithm_swift/Greedy;
 			sourceTree = "<group>";
 		};
+		C7D5B41B2C70695A00BBF7BE /* 백준 */ = {
+			isa = PBXGroup;
+			children = (
+				C7D5B41C2C70697600BBF7BE /* main.swift */,
+			);
+			name = "백준";
+			path = "백준";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -514,7 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7D5B4182C6F0EC700BBF7BE /* 프로세스.swift in Sources */,
-				C7D5B40A2C6DAA9100BBF7BE /* main.swift in Sources */,
+				C7D5B41D2C70697600BBF7BE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
