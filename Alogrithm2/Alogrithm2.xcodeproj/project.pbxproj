@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C70C46D32C71AB9200355A52 /* 12851.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C46D22C71AB9200355A52 /* 12851.swift */; };
-		C7D5B4182C6F0EC700BBF7BE /* 프로세스.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D5B4172C6F0EC700BBF7BE /* 프로세스.swift */; };
+		C70C46D72C72ECEE00355A52 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C46D62C72ECEE00355A52 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +25,7 @@
 /* Begin PBXFileReference section */
 		C70C46D22C71AB9200355A52 /* 12851.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12851.swift; sourceTree = "<group>"; };
 		C70C46D42C71BECF00355A52 /* 베스트앨범.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "베스트앨범.swift"; sourceTree = "<group>"; };
+		C70C46D62C72ECEE00355A52 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C733C0812C69BA6B00B4BDA3 /* 1470.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1470.swift; sourceTree = "<group>"; };
 		C733C0862C69D8E800B4BDA3 /* 의상.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "의상.swift"; sourceTree = "<group>"; };
 		C74F70B82C65DC77007AC970 /* Alogrithm2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Alogrithm2; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D5B41C2C70697600BBF7BE /* test.swift */,
+				C70C46D62C72ECEE00355A52 /* main.swift */,
 			);
 			name = "백준";
 			path = "백준";
@@ -528,8 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D5B4182C6F0EC700BBF7BE /* 프로세스.swift in Sources */,
-				C70C46D32C71AB9200355A52 /* 12851.swift in Sources */,
+				C70C46D72C72ECEE00355A52 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
