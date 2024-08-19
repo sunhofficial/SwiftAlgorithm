@@ -1,18 +1,14 @@
 //
-//  9625.swift
+//  14912.swift
 //  Alogrithm2
 //
 //  Created by Sunho on 8/19/24.
 //
 
 import Foundation
-let k = Int(readLine()!)!
-func flip(_ n: Int ) -> (Int,Int){
-    var cur = (1,0)
-    for i in 1...n {
-        cur = (cur.1, cur.0 + cur.1)
-    }
-    return cur
+let nd = readLine()!.split(separator: " ").map{Int(String($0))!}
+var cnt = 0
+for i in 1...nd[0] {
+    cnt  += String(i).compactMap {Int(String($0))}.filter{$0 == nd[1]}.count
 }
-
-print("\(flip(k).0) \(flip(k).1)")
+print(cnt)
