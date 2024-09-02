@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C73372532C81643E00030E8C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73372522C81643E00030E8C /* main.swift */; };
+		C7107D182C8580D400C181EE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7107D172C8580D400C181EE /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +35,8 @@
 		C70C46E92C75825400355A52 /* 11049.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11049.swift; sourceTree = "<group>"; };
 		C70C46EB2C7752FB00355A52 /* 17271.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17271.swift; sourceTree = "<group>"; };
 		C70C46ED2C77695800355A52 /* 섬연결하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "섬연결하기.swift"; sourceTree = "<group>"; };
-		C73372522C81643E00030E8C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C7107D172C8580D400C181EE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C73372522C81643E00030E8C /* 1806.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1806.swift; sourceTree = "<group>"; };
 		C733C0812C69BA6B00B4BDA3 /* 1470.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1470.swift; sourceTree = "<group>"; };
 		C733C0862C69D8E800B4BDA3 /* 의상.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "의상.swift"; sourceTree = "<group>"; };
 		C74AFC5E2C784A5E009C641C /* 1967.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1967.swift; sourceTree = "<group>"; };
@@ -481,9 +482,10 @@
 				C7D5B41C2C70697600BBF7BE /* test.swift */,
 				C70C46D62C72ECEE00355A52 /* 6794.swift */,
 				C70C46D82C72EF6900355A52 /* 9625.swift */,
-				C73372522C81643E00030E8C /* main.swift */,
+				C73372522C81643E00030E8C /* 1806.swift */,
 				C70C46DC2C7319AD00355A52 /* 4383.swift */,
 				C70C46DA2C72F23900355A52 /* 14912.swift */,
+				C7107D172C8580D400C181EE /* main.swift */,
 				C70C46E12C74691500355A52 /* 2567.swift */,
 				C70C46E32C74709A00355A52 /* 11277.swift */,
 				C70C46E52C74888400355A52 /* 10751.swift */,
@@ -551,7 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73372532C81643E00030E8C /* main.swift in Sources */,
+				C7107D182C8580D400C181EE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
