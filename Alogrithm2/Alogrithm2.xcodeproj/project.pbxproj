@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C715FAE62C8BF2DA00E1B0C5 /* 보석쇼핑.swift in Sources */ = {isa = PBXBuildFile; fileRef = C715FAE52C8BF2DA00E1B0C5 /* 보석쇼핑.swift */; };
+		C70C7CB32C8C09A700B77BA1 /* 2252.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C7CB22C8C09A700B77BA1 /* 2252.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +35,7 @@
 		C70C46E92C75825400355A52 /* 11049.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11049.swift; sourceTree = "<group>"; };
 		C70C46EB2C7752FB00355A52 /* 17271.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17271.swift; sourceTree = "<group>"; };
 		C70C46ED2C77695800355A52 /* 섬연결하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "섬연결하기.swift"; sourceTree = "<group>"; };
+		C70C7CB22C8C09A700B77BA1 /* 2252.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2252.swift; sourceTree = "<group>"; };
 		C7107D172C8580D400C181EE /* 2467.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2467.swift; sourceTree = "<group>"; };
 		C715FAE52C8BF2DA00E1B0C5 /* 보석쇼핑.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "보석쇼핑.swift"; sourceTree = "<group>"; };
 		C71B2DFC2C8AB1E300620EFE /* 10830.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10830.swift; sourceTree = "<group>"; };
@@ -513,6 +514,7 @@
 				C70C46DC2C7319AD00355A52 /* 4383.swift */,
 				C70C46DA2C72F23900355A52 /* 14912.swift */,
 				C7107D172C8580D400C181EE /* 2467.swift */,
+				C70C7CB22C8C09A700B77BA1 /* 2252.swift */,
 				C70C46E12C74691500355A52 /* 2567.swift */,
 				C70C46E32C74709A00355A52 /* 11277.swift */,
 				C70C46E52C74888400355A52 /* 10751.swift */,
@@ -580,7 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C715FAE62C8BF2DA00E1B0C5 /* 보석쇼핑.swift in Sources */,
+				C70C7CB32C8C09A700B77BA1 /* 2252.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
