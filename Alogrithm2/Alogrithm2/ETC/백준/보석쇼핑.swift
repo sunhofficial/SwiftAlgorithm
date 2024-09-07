@@ -43,7 +43,7 @@ func solution(_ gems:[String]) -> [Int] {
             }
             gemDict[gems[start]]! -= 1
             if gemDict[gems[start]] == 0 {
-                gemDict.removeValue(forKey: gems[start])
+                gemDict[gems[start]]  = nil
             }
             start += 1
         }
