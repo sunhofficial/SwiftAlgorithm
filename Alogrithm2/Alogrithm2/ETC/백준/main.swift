@@ -1,25 +1,19 @@
 //
-//  2872.swift
+//  17298.swift
 //  Alogrithm2
 //
-//  Created by Sunho on 9/8/24.
+//  Created by Sunho on 10/8/24.
 //
 
 import Foundation
 let n = Int(readLine()!)!
-var stacks = [Int]()
-for _ in 0..<n {
-    stacks.append(Int(readLine()!)!)
-    
-}
-var maxBook = n
-var sortedCount = 0
-for i in stride(from: n-1 , through: 0, by: -1) {
-    if stacks[i] == maxBook {
-        sortedCount += 1
-        maxBook -= 1
+var aarrays = readLine()!.split(separator: " ").map{Int(String($0))!}
+var stack = [[0,aarrays[0]]]
+var answer = Array(repeating: "-1", count: n)
+for i in 1..<aarrays.count {
+    while !stack.isEmpty && aarrays[i] > stack.last![1] {
+        answer[stack.removeLast()[0]] = "\(aarrays[i])"
     }
+    stack.append([i,aarrays[i]])
 }
-
-let result = n - sortedCount
-print(result)
+print(answer.joined(separator: " "))
