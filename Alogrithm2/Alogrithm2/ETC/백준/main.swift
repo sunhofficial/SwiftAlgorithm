@@ -1,5 +1,5 @@
 //
-//  20040.swift
+//  16724.swift
 //  Alogrithm2
 //
 //  Created by Sunho on 10/22/24.
@@ -7,37 +7,39 @@
 
 import Foundation
 let nm = readLine()!.split(separator: " ").map{Int(String($0))!}
-var parent = [Int](0..<nm[0])
-func find(_ x: Int) -> Int {
-    if parent[x] == x {
-        return x
-    }
-    parent[x] = find(parent[x])
-    return parent[x]
+var map = Array(repeating: [String](), count: 1001)
+//0:방문x, 1:방문중 2:방문 끝
+var visited = [[Int]](repeating: [Int](repeating: 0, count: nm[1]), count: nm[0])
+for i in 0..<nm[0] {
+    let line = readLine()!.map{String($0)}
+    map[i] = line
 }
-func union(_ a:Int, _ b: Int) {
-    let a = find(a)
-    let b = find(b)
-    if a == b {
-        return
+
+let dx = [-1,1,0,0]
+let dy = [0,0,-1,1]
+let directions: [String: Int] = ["U": 0, "D": 1, "L": 2, "R": 3]
+var result = 0
+func dfs(x: Int, y: Int) {
+    visited[x][y] = 1
+    let direction = directions[map[x][y]]!
+    let nx = x + dx[direction]
+    let ny = y + dy[direction]
+    if nx >= 0 && nx < nm[0] && ny >= 0 && ny < nm[1]{
+        if visited[nx][ny] == 1 {
+            result += 1
+        } else if visited[nx][ny] == 0 {
+            dfs(x: nx, y: ny)
+        }
     }
-    if a > b {
-        parent[a] = b
-    } else {
-        parent[b] = a
+    
+    visited[x][y] = 2
+}
+for i in 0..<nm[0]{
+    for j in 0..<nm[1] where visited[i][j] == 0 {
+        
+        dfs(x: i, y: j)
+        
     }
 }
-func isSameParent(_ a: Int, _ b: Int) -> Bool {
-    return find(a) == find(b)
-}
-var answer = 0
-for i  in 1...nm[1]{
-    let input = readLine()!.split(separator: " ").map { Int($0)! }
-    let a = input[0],   b = input[1]
-    if isSameParent(a, b) {
-        answer = i
-        break
-    }
-    union(a, b)
-}
-print(answer)
+
+print(result)
