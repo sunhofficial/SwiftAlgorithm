@@ -18,3 +18,4 @@ for dest in target {
     array.remove(at: destIndex)
 }
 print(answer)
+
