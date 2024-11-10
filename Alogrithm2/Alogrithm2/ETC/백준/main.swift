@@ -1,32 +1,23 @@
 //
-//  22867.swift
+//  testC.swift
 //  Alogrithm2
 //
 //  Created by Sunho on 11/10/24.
 //
 
 import Foundation
-let n = Int(readLine()!)!
-var totaltimes = [[String]]()
-for i in 0..<n {
-    let times = readLine()!.split(separator: " ").map{String($0)}
-    totaltimes.append([times[0],"1"])
-    totaltimes.append([times[1],"-1"])
-}
-
-totaltimes.sort {
-    if $0[0] == $1[0] {
-        return $0[1] > $1[1]
+let nk = readLine()!.split(separator: " ").map{Int(String($0))!}, k = nk[1]
+var abags = readLine()!.split(separator: " ").map{Int(String($0))!}
+var bbags = readLine()!.split(separator: " ").map{Int(String($0))!}
+var aSum = abags.reduce(0, +)
+var bSum = bbags.reduce(0, +)
+for i in 0..<k {
+    if aSum > bSum {
+        aSum -= abags.last!
+        abags.removeLast()
     } else {
-        return $0[0] < $1[0]
+        bSum -= bbags.last!
+        bbags.removeLast()
     }
 }
-
-var result = 0
-var answer = 0
-for time in totaltimes {
-    result += Int(time[1])!
-    answer = max(answer, result)
-}
-
-print(answer)
+print(max(aSum, bSum))
