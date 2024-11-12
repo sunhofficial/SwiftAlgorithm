@@ -47,6 +47,9 @@ func permutationSum(k: Int, targetSum: Int) -> [[Int]] {
     var result = [[Int]]()
     func permute(current: [Int]) {
         // current 배열의 크기가 k가 되고, 합이 targetSum일 때 결과에 추가
+        if current.reduce(0,+) > targetSum {
+            return
+        }
         if current.count == k {
             if current.reduce(0, +) == targetSum {
                 result.append(current)
