@@ -15,9 +15,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            endingLineNumber = "36">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -31,9 +29,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            endingLineNumber = "39">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -47,9 +43,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            endingLineNumber = "35">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
