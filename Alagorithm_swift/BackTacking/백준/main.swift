@@ -9,16 +9,18 @@ import Foundation
 let nm = readLine()!.split(separator: " ").map{Int(String($0))!}
 let arrs = readLine()!.split(separator: " ").map{Int(String($0))!}.sorted()
 var ans: [String] = []
-func dfs(_ cnt: Int, _ str: String, _ i: Int) {
-    if cnt == nm[1] {
-        if ans.contains(str) { return }
-        ans.append(str)
-        print(str)
+func dfs(_ depth: Int, _ start: Int) {
+    var prev = 0
+    if depth == nm[1] {
+        print(ans.joined(separator: " "))
         return
     }
-    for i in i..<nm[0] {
-        dfs(cnt + 1, "\(str)\(arrs[i]) ", i)
+    for i in start..<nm[1] where prev != arrs[i] {
+        prev = arrs[i]
+        ans.append(String(prev))
+        dfs(depth+1, i+1)
+        ans.removeLast()
     }
 }
 
-dfs(0, "",0)
+dfs(0, 0)
