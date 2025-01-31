@@ -1,93 +1,58 @@
 //
-//  1647.swift
+//  3190.swift
 //  Alogrithm2
 //
 //  Created by Sunho on 1/31/25.
 //
 
 import Foundation
-final class FileIO {
-    private var buffer:[UInt8]
-    private var index: Int
+let n = Int(readLine()!)!
+let k = Int(readLine()!)!
+var maps = Array(repeating: Array(repeating: false, count: n + 1 ), count: n + 1)
+for _ in 0..<k {
+    let ab = readLine()!.split(separator: " ").map{Int(String($0))!}, a = ab[0], b = ab[1]
+    maps[a][b]  = true
+}
+let l  = Int(readLine()!)!
+var turns = [Int: String]()
+for _ in 0..<l {
+    let ab = readLine()!.split(separator: " "), a = ab[0], b = ab[1]
+    turns[Int(a)!] = String(b)
+}
 
-    init(fileHandle: FileHandle = FileHandle.standardInput) {
-        buffer = Array(fileHandle.readDataToEndOfFile())+[UInt8(0)] // 인덱스 범위 넘어가는 것 방지
-        index = 0
+// 방향 (동, 남, 서, 북)
+let dir = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+func is_valid(_ x: Int, _ y : Int) -> Bool {
+    return (1...n ~= x) && (1...n ~= y)
+}
+var cnt = 0
+var dirIndex = 0 // 현재방향
+var snake = [(Int,Int)]() //뱀의 위치
+snake.append((1,1))
+while true {
+    cnt += 1
+    let head = snake.first!
+    let (nx, ny) = (head.0 + dir[dirIndex].0, head.1 + dir[dirIndex].1)
+    guard is_valid(nx, ny) &&  !snake.contains(where: {$0 == (nx, ny)}) else {
+        break
     }
-
-    @inline(__always) private func read() -> UInt8 {
-        defer { index += 1 }
-
-        return buffer.withUnsafeBufferPointer { $0[index] }
+    snake.insert((nx,ny), at: 0)
+    if maps[nx][ny] {
+        maps[nx][ny] = false
+  
+    } else {
+        snake.removeLast()
     }
-
-    @inline(__always) func readInt() -> Int {
-        var sum = 0
-        var now = read()
-        var isPositive = true
-
-        while now == 10
-            || now == 32 { now = read() } // 공백과 줄바꿈 무시
-        if now == 45{ isPositive.toggle(); now = read() } // 음수 처리
-        while now >= 48, now <= 57 {
-            sum = sum * 10 + Int(now-48)
-            now = read()
+    if let turn = turns[cnt] {
+        switch turn {
+        case "L":
+            dirIndex = (dirIndex + 3) % 4
+        case "D":
+            dirIndex = (dirIndex + 1) % 4
+        default:
+            break
         }
-
-        return sum * (isPositive ? 1:-1)
     }
-
-    @inline(__always) func readString() -> String {
-        var str = ""
-        var now = read()
-
-        while now == 10
-            || now == 32 { now = read() } // 공백과 줄바꿈 무시
-
-        while now != 10
-            && now != 32 && now != 0 {
-                str += String(bytes: [now], encoding: .ascii)!
-                now = read()
-        }
-
-        return str
-    }
-}
-let file = FileIO()
-
-
-let n = file.readInt()
-let m = file.readInt()
-var maps = [[Int]]()
-for _ in 0..<m {
-    let a = file.readInt()
-       let b = file.readInt()
-       let c = file.readInt()
-   maps.append([a,b,c])
-}
-maps.sort{ $0[2] < $1[2]}
-var parent = Array(0...n)
-func findParent(_ x: Int) -> Int {
-    if parent[x] != x {
-        parent[x] = findParent(parent[x])  // 경로 압축 적용
-    }
-    return parent[x]
-}
-var costs = 0
-var maxEdge = 0
-func union(_ a: Int, _ b: Int) {
-    let aparent = findParent(a)
-    let bparent = findParent(b)
-    parent[bparent] = aparent
-}
-for node in maps {
-    let px = findParent(node[0]),  py = findParent(node[1])
     
-    if px != py {
-        union(node[0], node[1])
-        costs += node[2]
-        maxEdge = node[2]
-    }
 }
-print(costs - maxEdge)
-
+print(cnt)
