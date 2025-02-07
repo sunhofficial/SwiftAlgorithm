@@ -190,9 +190,19 @@
 		C7FE148B2CB7FB6400C37A57 /* 2110.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2110.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C7F55E712D55B1A700A43B50 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"H클린알파.swift",
+			);
+			target = C74F70B72C65DC77007AC970 /* Alogrithm2 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C7F55E5E2D54A3FB00A43B50 /* 알아두면 좋을 알고리즘 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "알아두면 좋을 알고리즘"; path = "알아두면 좋을 알고리즘"; sourceTree = "<group>"; };
-		C7F55E622D54BECE00A43B50 /* 소프티어 */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "소프티어"; path = "소프티어"; sourceTree = "<group>"; };
+		C7F55E622D54BECE00A43B50 /* 소프티어 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C7F55E712D55B1A700A43B50 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); name = "소프티어"; path = "소프티어"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
