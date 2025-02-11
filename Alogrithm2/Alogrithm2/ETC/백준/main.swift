@@ -1,29 +1,30 @@
-//
-//  main.swift
-//  Alogrithm2
-//
-//  Created by Sunho on 2/10/25.
-//
-
+//15681
 import Foundation
-let nh = readLine()!.split(separator: " ").map{Int(String($0))!}, n = nh[0], h = nh[1]
-var heights = [Int]()
-for i in 0..<n {
-    heights.append(Int(readLine()!)!)
-}
 
-var dp = Array(repeating: 0, count: h)
-for height in stride(from: 0, to: n, by: 2) {
-    for k in 0..<heights[height] {
-        dp[k] += 1
+let input = readLine()!.split(separator: " ").map { Int($0)! }
+let n = input[0], r = input[1], q = input[2]
+var edges = [[Int]](repeating: [], count: n + 1)
+for _ in 0..<n - 1 {
+    let input = readLine()!.split(separator: " ").map { Int($0)! }
+    let u = input[0], v = input[1]
+    edges[u].append(v)
+    edges[v].append(u)
+}
+var dp  = [Int](repeating: 0, count: n + 1)
+func dfs(node: Int) {
+    dp[node] = 1
+    for nextnode in edges[node] {
+        if dp[nextnode ] == 0 {
+            dfs(node: nextnode)
+            dp[node] += dp[nextnode]
+        }
     }
 }
-for k in stride(from:1 , to: n, by: 2) {
-    let height = heights[k]
-     for k in stride(from: h - 1, through: h - height, by: -1 ) {
-        dp[k] += 1
-    }
+dfs(node: r)
+
+var answer = ""
+for _ in 0..<q {
+    let node = Int(readLine()!)!
+    answer += "\(dp[node])\n"
 }
-let dpmin = dp.min()!
-let mincount = dp.filter{$0 == dpmin}.count
-print(dpmin, mincount)
+print(answer)
