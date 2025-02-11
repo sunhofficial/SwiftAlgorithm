@@ -1,30 +1,41 @@
-//15681
-import Foundation
+//
+//  15591.swift
+//  Alogrithm2
+//
+//  Created by Sunho on 2/11/25.
+//
 
-let input = readLine()!.split(separator: " ").map { Int($0)! }
-let n = input[0], r = input[1], q = input[2]
-var edges = [[Int]](repeating: [], count: n + 1)
-for _ in 0..<n - 1 {
-    let input = readLine()!.split(separator: " ").map { Int($0)! }
-    let u = input[0], v = input[1]
-    edges[u].append(v)
-    edges[v].append(u)
+import Foundation
+let nq = readLine()!.split(separator: " ").map{Int(String($0))!}, n = nq[0], q = nq[1]
+var arr = Array(repeating: [(Int,Int)](), count: n + 1)
+for _ in 1..<n {
+    let pqrt = readLine()!.split(separator: " ").map{Int(String($0))!}
+    arr[pqrt[0]].append((pqrt[1],pqrt[2]))
+    arr[pqrt[1]].append((pqrt[0],pqrt[2]))
 }
-var dp  = [Int](repeating: 0, count: n + 1)
-func dfs(node: Int) {
-    dp[node] = 1
-    for nextnode in edges[node] {
-        if dp[nextnode ] == 0 {
-            dfs(node: nextnode)
-            dp[node] += dp[nextnode]
+
+func bfs(_ k: Int, _ start: Int) -> Int {
+    var visited = [Bool](repeating: false, count: n + 1)
+    var queue = [start]
+    visited[start] = true
+    var cnt = 0
+    var index = 0
+    while queue.count > index {
+        let node = queue[index]
+        index += 1
+        for (next, nextV) in arr[node] {
+            if !visited[next] && nextV >= k {
+                visited[next] = true
+                queue.append(next)
+                cnt += 1
+            }
         }
     }
+    return cnt
 }
-dfs(node: r)
-
-var answer = ""
+var result = [Int]()
 for _ in 0..<q {
-    let node = Int(readLine()!)!
-    answer += "\(dp[node])\n"
+    let kv = readLine()!.split(separator: " ").map{Int(String($0))!}, k = kv[0], v = kv[1]
+    result.append(bfs(k, v))
 }
-print(answer)
+print(result.map{String($0)}.joined(separator: "\n"))
