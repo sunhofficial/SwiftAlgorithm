@@ -148,6 +148,7 @@
 		C74F71722C6864A5007AC970 /* 디스크컨트롤ㄹ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "디스크컨트롤ㄹ.swift"; sourceTree = "<group>"; };
 		C74F71732C687298007AC970 /* 1915.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1915.swift; sourceTree = "<group>"; };
 		C7629A7F2D5D7A4500A04720 /* 9466.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9466.swift; sourceTree = "<group>"; };
+		C7629A812D5D8C2F00A04720 /* 17404.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17404.swift; sourceTree = "<group>"; };
 		C7630CB92C8D62B200F1BDB3 /* 2872.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2872.swift; sourceTree = "<group>"; };
 		C77204B02C86A74000ED208C /* N으로표현.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "N으로표현.swift"; sourceTree = "<group>"; };
 		C772C5552D3E6083004AE231 /* 1062.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1062.swift; sourceTree = "<group>"; };
@@ -482,6 +483,7 @@
 				C74F71062C65DC93007AC970 /* 15988.swift */,
 				C74F71072C65DC93007AC970 /* Alagorithm_swift-Bridging-Header.h */,
 				C772C5572D3F58D6004AE231 /* 2096.swift */,
+				C7629A812D5D8C2F00A04720 /* 17404.swift */,
 			);
 			path = "백준";
 			sourceTree = "<group>";
