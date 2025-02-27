@@ -9,70 +9,6 @@ import Foundation
 let ve = readLine()!.split(separator: " ").map{Int(String($0))!}, v = ve[0], e = ve[1]
 let startPoint = Int(readLine()!)!
 var graph = [[Data]](repeating: [], count: v + 1)
-for _ in 0..<e {
-    let input = readLine()!.split(separator: " ").map { Int($0)! }
-    let a = input[0], b = input[1], cost = input[2]
-    graph[a].append(Data(node: b, cost: cost))
-}
-let INF = 1_234_567_890
-var distance = [Int](repeating: INF, count: v + 1)
-
-struct Heap<T: Comparable> {
-    private var elements: [T] = []
-    private var comparer: (T,T) -> Bool
-    var isEmpty: Bool {
-        return elements.count <= 1
-    }
-    var top: T? {
-        return isEmpty ? nil : elements[1]
-    }
-    init(comparer: @escaping (T, T) -> Bool) {
-        self.comparer = comparer
-    }
-    mutating func insert(element: T ) {
-        if elements.isEmpty {
-            elements.append(element)
-            elements.append(element)
-            return
-        } else {
-            elements.append(element)
-            swimUp(index: elements.count - 1)
-        }
-        
-    }
-    mutating func swimUp(index: Int) {
-        var index = index
-        while index > 1 && comparer(elements[index] , elements[index / 2]) {
-            elements.swapAt(index, index / 2)
-            index /= 2
-        }
-    }
-    mutating func pop() -> T? {
-        if elements.count <  2 {return nil}
-        elements.swapAt(1, elements.count - 1)
-        let deleteElement = elements.removeLast()
-        driveDown(index: 1)
-        return deleteElement
-    }
-    mutating private func driveDown(index: Int) {
-        var swapIndex = index
-        var isSwap = false
-        let leftIndex = index * 2
-        let rightIndex = index * 2 + 1
-        if leftIndex < elements.endIndex && comparer(elements[leftIndex], elements[swapIndex]) {
-            swapIndex = leftIndex
-            isSwap = true
-        }
-        if rightIndex < elements.endIndex && comparer(elements[rightIndex], elements[swapIndex]) {
-            swapIndex = rightIndex
-            isSwap = true
-        }
-        if isSwap {
-            elements.swapAt(swapIndex, index)
-            driveDown(index: swapIndex)
-        }
-    }
-}
 struct Data: Comparable {
     static func < (lhs: Data, rhs: Data) -> Bool {
         return lhs.cost < rhs.cost
@@ -80,9 +16,73 @@ struct Data: Comparable {
     let node: Int
     let cost: Int
 }
+for _ in 0..<e {
+    let input = readLine()!.split(separator: " ").map { Int($0)! }
+    let a = input[0], b = input[1], cost = input[2]
+    graph[a].append(Data(node: b, cost: cost))
+}
+let INF = 1_234_567_890
+var distance = [Int](repeating: INF, count: v + 1)
+struct PriorityQueue<T: Comparable> {
+    private var comparer: (T, T ) -> Bool
+    private var data: [T] = []
+    init(comparer: @escaping (T,T) -> Bool) {
+        self.comparer = comparer
+    }
+    var top: T? {
+        return isEmpty ? nil : data[1]
+    }
+    var isEmpty {
+        return data.count <= 1
+    }
+    mutating func enqueue(_ element: T) {
+        if isEmpty {
+            data.append(element)
+            data.append(element)
+            return
+        } else {
+            data.append(element)
+            swimUP(index: data.count - 1)
+        }
+    }
+    mutating func swimUP(index: Int) {
+        var index = index
+        while index > 1 && comparer(data[index], data[index/2]) {
+            data.swapAt(index , index / 2)
+            index /= 2
+        }
+    }
+    mutating func pop() -> T? {
+        if isEmpty { return nil}
+        data.swapAt(1, data.count - 1)
+        let delete = data.removeLast()
+        driveDown(index: 1)
+        return delete
+        
+    }
+    mutating func driveDown(index: Int) {
+        var swapIndex = index
+        var isSwap = false
+        let leftindex = index * 2
+        let rightIndex = index * 2 + 1
+        if leftindex < data.count && comparer(data[leftindx], data[swapIndex]) {
+            swapIndex = leftindex
+            isSwap = true
+        }
+        if rightIndex < data.count && comparer(data[rightIndex], data[swapIndex]) {
+            swapIndex = rightIndex
+            isSwap = true
+        }
+        if isSwap {
+            data.swapAt(swapIndex, index)
+            driveDown(index: swapIndex)
+        }
+    }
+}
+
 
 func dijkstra(start: Int) {
-    var heap = Heap<Data>(comparer: <)
+    var heap = PriorityQueue<Data>(comparer: <)
     distance[startPoint] = 0
     heap.insert(element: Data(node: start, cost: 0))
     while !heap.isEmpty {
