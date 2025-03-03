@@ -6,33 +6,46 @@
 //
 
 import Foundation
-let n = Int(readLine()!)!
-let aArrays = readLine()!.split(separator: " ").map{ Int(String($0))!}
-let tools = readLine()!.split(separator: " ").map{ Int(String($0))!}
-var resultMax = Int.min
-var resultMin = Int.max
+let nm = readLine()!.split(separator: " ").map{Int(String($0))!}, n = nm[0], m = nm[1]
+var maps = [[Int]]()
+var chickens = [(Int,Int)]()
+var houses = [(Int,Int)]()
+    for i in 0..<n {
+        let input = readLine()!.split(separator: " ").map{Int(String($0))!}
+        maps.append(input)
+        for k 0..<n {
+            if input[k] == 1 {houses.append((i,k))}
+            else if input[k] == 2 {chickens.append((i,k))}
+        }
+        
+    }
+var answer = Int.max
+var visited = Array(repeating: false , count: chickens.count)
+func dfs(_ start: Int, _ count: Int) {
+    if count == m { //치킨집 다고름
+        //거리를 구해보자구나.
+        var totalDistance = 0
+        for house in houses {
+            var minDistance = Int.max
 
-func dfs(_ cnt: Int, _ values: Int, pluss: Int, minuss: Int, mlutis: Int, divides: Int) {
-    if cnt == n {
-        resultMax = max(resultMax,values )
-        resultMin = min(resultMin, values)
+            for i in 0..<chickens.count {
+                if visited[i] {
+                    minDistance = min(minDistance , abs(house.0 - chickens[i].0) + abs(house.1 - chickens[i].1))
+                }
+            }
+            totalDistance += minDistance
+        }
+        answer = min(totalDistance, answer)
         return
+        
+        
     }
-    if pluss > 0 {
-        dfs(cnt + 1, values + aArrays[cnt], pluss: pluss - 1, minuss: minuss, mlutis: mlutis, divides: divides)
+    for i in start..<chickens.count {
+        if !visited[i] {
+            visited[i] = true
+            dfs(i, count + 1)
+            visited[i] = false
+        }
     }
-    if minuss > 0 {
-        dfs(cnt + 1, values - aArrays[cnt], pluss: pluss, minuss: minuss - 1, mlutis: mlutis, divides: divides)
-    }
-    if divides > 0 {
-        dfs(cnt + 1 , values / aArrays[cnt], pluss: pluss, minuss: minuss, mlutis: mlutis, divides: divides - 1)
-
-    }
-    if mlutis > 0 {
-        dfs(cnt + 1, values * aArrays[cnt] , pluss: pluss, minuss: minuss, mlutis: mlutis - 1 , divides: divides)
-    }
-
 }
-dfs(1, aArrays[0], pluss: tools[0], minuss: tools[1], mlutis: tools[2], divides:  tools[3])
-print(resultMax)
-print(resultMin)
+                                               
