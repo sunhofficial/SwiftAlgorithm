@@ -1,23 +1,35 @@
 //
-//  6588.swift
+//  1717.swift
 //  Alogrithm2
 //
 //  Created by Sunho on 3/7/25.
 //
 
 let nm = readLine()!.split(separator: " ").map{Int(String($0))!}, n = nm[0], m = nm[1]
-var cards = readLine()!.split(separator: " ").map{Int(String($0))!}
-cards.sort(by: >)
+var parent = Array(0...n)
+func find(_ node: Int) -> Int {
+    if parent[node] == node {
+        return node
+    }
+    parent[node] = find(parent[node])
+    return parent[node]
+}
 
+func union(_ node1: Int, _ node2: Int) {
+    let root1 = find(node1), root2 = find(node2)
+    if root1 != root2 {
+        parent[root1] = root2
+    }
+}
 for _ in 0..<m {
-    let temp = cards[n - 1] + cards[n - 2]
-    cards[n - 1 ] = temp
-    cards[n - 2 ] = temp
-    cards.sort(by: >)
+    let abc = readLine()!.split(separator: " ").map{Int(String($0))!}
+    if abc[0] == 0 {
+        union(abc[1], abc[2])
+    } else {
+        if find(abc[1]) == find(abc[2]) {
+            print("YES")
+        } else {
+            print("NO")
+        }
+    }
 }
-var answer = 0
-for i in cards {
-    answer += i
-}
-
-print(answer)
