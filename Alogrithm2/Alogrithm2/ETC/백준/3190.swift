@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 let n = Int(readLine()!)!
 let k = Int(readLine()!)!
 var maps = Array(repeating: Array(repeating: false, count: n + 1 ), count: n + 1)
@@ -20,39 +21,37 @@ for _ in 0..<l {
     turns[Int(a)!] = String(b)
 }
 
-// 방향 (동, 남, 서, 북)
-let dir = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+let dx = [1,0,-1,0] // 방향 동남서북
+let dy = [0,1,0,-1]
 func is_valid(_ x: Int, _ y : Int) -> Bool {
     return (1...n ~= x) && (1...n ~= y)
 }
-var cnt = 0
-var dirIndex = 0 // 현재방향
-var snake = [(Int,Int)]() //뱀의 위치
-snake.append((1,1))
+var currentDir = 0 //0: 동, 1: 남, 2:서, 3: 북
+var snake : [(Int,Int)] = [(1,1)]
+var time = 0
 while true {
-    cnt += 1
+    time += 1
     let head = snake.first!
-    let (nx, ny) = (head.0 + dir[dirIndex].0, head.1 + dir[dirIndex].1)
-    guard is_valid(nx, ny) &&  !snake.contains(where: {$0 == (nx, ny)}) else {
+    var (nx,ny) = (head.0 + dx[currentDir] ,head.1 + dy[currentDir])
+    if !is_valid(nx, ny) || snake.contains(where: {$0 == (nx,ny)}) {
         break
     }
-    snake.insert((nx,ny), at: 0)
-    if maps[nx][ny] {
-        maps[nx][ny] = false
-  
+    snake.insert(((nx,ny)), at: 0)
+    if maps[ny][nx] {
+        maps[ny][nx] = false
     } else {
         snake.removeLast()
     }
-    if let turn = turns[cnt] {
+    if let turn = turns[time] {
         switch turn {
         case "L":
-            dirIndex = (dirIndex + 3) % 4
+            currentDir = ( currentDir + 3 ) % 4
         case "D":
-            dirIndex = (dirIndex + 1) % 4
+            currentDir = (currentDir  + 1) % 4
         default:
             break
         }
     }
-    
 }
-print(cnt)
+
+print(time)
