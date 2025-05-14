@@ -6,6 +6,10 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C7D48E4A2DD49759008AD459 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D48E492DD49759008AD459 /* main.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C74F70B62C65DC77007AC970 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -185,6 +189,9 @@
 		C7CE1BD92D4CF93C0063CE87 /* 3190.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3190.swift; sourceTree = "<group>"; };
 		C7D05DFE2CB793E3002813E4 /* 1766.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1766.swift; sourceTree = "<group>"; };
 		C7D48E422DD1B588008AD459 /* 14499.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14499.swift; sourceTree = "<group>"; };
+		C7D48E442DD1CB0F008AD459 /* 14500.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14500.swift; sourceTree = "<group>"; };
+		C7D48E462DD2E873008AD459 /* 14501.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14501.swift; sourceTree = "<group>"; };
+		C7D48E492DD49759008AD459 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C7D5B3F82C6B4AB000BBF7BE /* 2032.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2032.swift; sourceTree = "<group>"; };
 		C7D5B3FA2C6B7DC600BBF7BE /* 2011.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2011.swift; sourceTree = "<group>"; };
 		C7D5B4022C6C47FB00BBF7BE /* 2589.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2589.swift; sourceTree = "<group>"; };
@@ -514,6 +521,7 @@
 				C74F71072C65DC93007AC970 /* Alagorithm_swift-Bridging-Header.h */,
 				C772C5572D3F58D6004AE231 /* 2096.swift */,
 				C7629A812D5D8C2F00A04720 /* 17404.swift */,
+				C7D48E462DD2E873008AD459 /* 14501.swift */,
 			);
 			path = "백준";
 			sourceTree = "<group>";
@@ -545,6 +553,7 @@
 				C70C46D22C71AB9200355A52 /* 12851.swift */,
 				C7FCF5F22D6CA1A100E8A9ED /* 9205.swift */,
 				C7D5B4022C6C47FB00BBF7BE /* 2589.swift */,
+				C7D48E442DD1CB0F008AD459 /* 14500.swift */,
 				C74AFC5E2C784A5E009C641C /* 1967.swift */,
 				C78F1ECA2CE1ACBB006C373A /* 25516.swift */,
 				C733C0812C69BA6B00B4BDA3 /* 1470.swift */,
@@ -565,6 +574,7 @@
 				C74F71132C65DC93007AC970 /* 18352.swift */,
 				C74F716A2C673BF4007AC970 /* Alogrithm2-Bridging-Header.h */,
 				C7FFD4892D5C5B8F00F2B1C9 /* 21736.swift */,
+				C7D48E492DD49759008AD459 /* main.swift */,
 			);
 			path = "백준";
 			sourceTree = "<group>";
@@ -646,7 +656,6 @@
 				C7D5B41C2C70697600BBF7BE /* test.swift */,
 				C71799C52D8AB60000CA2D76 /* 2877.swift */,
 				C7FA596C2CC74B5D00155C60 /* 20040.swift */,
-				C70F70F72DD051C900F10CA0 /* 13458.swift */,
 				C7D48E422DD1B588008AD459 /* 14499.swift */,
 				C71799C32D8AA8C500CA2D76 /* 2169.swift */,
 				C700EA842D797D78008E7D17 /* 2002.swift */,
@@ -663,6 +672,7 @@
 				C73372522C81643E00030E8C /* 1806.swift */,
 				C70C46DC2C7319AD00355A52 /* 4383.swift */,
 				C7198F0E2CD7634A006BD62B /* 문자열압축.swift */,
+				C70F70F72DD051C900F10CA0 /* 13458.swift */,
 				C7F55E602D54AA8A00A43B50 /* 10986.swift */,
 				C7C7FE8D2CE07AE4006796BC /* 12980.swift */,
 				C7FD98A12CE320CC00DE3D0A /* 상담원인원.swift */,
@@ -741,6 +751,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D48E4A2DD49759008AD459 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
