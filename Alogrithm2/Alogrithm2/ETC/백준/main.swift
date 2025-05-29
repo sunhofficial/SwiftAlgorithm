@@ -3,49 +3,17 @@ import Foundation
 let sp = readLine()!.split(separator: " ").map{Int(String($0))!}, s = sp[0], p = sp[1]
 let inputs = readLine()!.map{String($0)}
 let acgt = readLine()!.split(separator: " ").map{Int(String($0))!}
-var temp = inputs[0..<p]
 var arrs = [0,0,0,0]
 for k in 0..<p {
-    switch inputs[k] {
-    case "A":
-        arrs[0] += 1
-    case "C":
-        arrs[1] += 1
-    case "G":
-        arrs[2] += 1
-    case "T":
-        arrs[3] += 1
-    default:
-        break
-    }
+    updateCount(inputs[k], 1)
 }
 var ans = 0
 ans += isPossible() ? 1 : 0
 for i in p..<s {
     let next = inputs[i]
     let remove = inputs[i-p]
-    switch remove {
-    case "A":
-        arrs[0] -= 1
-    case "C":
-        arrs[1] -= 1
-    case "G":
-        arrs[2] -= 1
-    case "T":
-        arrs[3] -= 1
-    default: break
-    }
-    switch next {
-    case "A":
-        arrs[0] += 1
-    case "C":
-        arrs[1] += 1
-    case "G":
-        arrs[2] += 1
-    case "T":
-        arrs[3] += 1
-    default: break
-    }
+    updateCount(remove, -1)
+    updateCount(next, 1)
     ans += isPossible() ? 1 : 0
 }
 print(ans)
@@ -54,4 +22,13 @@ func isPossible() -> Bool {
         return true
     }
     return false
+}
+func updateCount(_ char: String, _ delta: Int) {
+    switch char {
+    case "A": arrs[0] += delta
+    case "C": arrs[1] += delta
+    case "G": arrs[2] += delta
+    case "T": arrs[3] += delta
+    default: break
+    }
 }
